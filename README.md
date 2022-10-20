@@ -4,16 +4,16 @@ BC Streamflow Monitoring Network Analysis
 Introduction
 ------------
 
-Large sample hydrometric datasets have a key role as input in
+The importance of validating inputs to any modelling effort is
+important. Large sample hydrometric datasets have a key role as input in
 hydrological studies (Addor et al. 2020; Gupta et al. 2014; Klingler,
 Schulz, and Herrnegger 2021) in both process-based and machine learning
-approaches, so the interpretation and validation of the basin attributes
-used as model input speaks for itself. Kratzert et al. (2019) used the
-large sample hydrologic dataset CAMELS (Addor et al. 2017) in a machine
-learning model for rainfall-runoff prediction in ungauged basins. Other
-efforts in generating large sample datasets attribute sets similar to
-CAMELS quickly followed (Alvarez-Garreton et al. 2018; Coxon et al.
-2020; Fowler et al. 2021).
+approaches. Kratzert et al. (2019) used the large sample hydrologic
+dataset CAMELS (Addor et al. 2017) in a machine learning model for
+rainfall-runoff prediction in ungauged basins. Other efforts in
+generating large sample datasets attribute sets similar to CAMELS
+quickly followed (Alvarez-Garreton et al. 2018; Coxon et al. 2020;
+Fowler et al. 2021).
 
 Arsenault et al. (2020) developed [HYSETS](https://osf.io/rpc3w/), a
 large-sample dataset of over 14K hydrometric monitoring stations in
@@ -22,18 +22,20 @@ attributes derived for the Arsenault et al. (2020) study, from
 collecting the source spatial data, to deriving catchments, to deriving
 basin attributes and comparing to the values derived in the study.
 
+Basin delineation is critical to acquiring representative values for
+many attribute indices, and here we discuss several challenges in
+automated basin delineation and highlight the information added to the
+process manually by experienced GIS practitioners, geographers, and
+hydrologists.
+
 Notes
 -----
-
-### DEM Pre-Conditioning
-
-Depression-filling of trillion-pixel rasters: Barnes (2016)
 
 Setup
 -----
 
 See the [README.md under
-`setup_scripts/`](https://github.com/dankovacek/hysets_validation/tree/main/setup_scripts)
+`setup_scripts/`](https://github.com/dankovacek/hysets_basin_delineation/tree/main/setup_scripts)
 for setup of the validation scripting.
 
 References
@@ -99,3 +101,8 @@ Kratzert, Frederik, Daniel Klotz, Mathew Herrnegger, Alden K Sampson,
 Sepp Hochreiter, and Grey S Nearing. 2019. “Toward Improved Predictions
 in Ungauged Basins: Exploiting the Power of Machine Learning.” *Water
 Resources Research* 55 (12): 11344–54.
+
+Robinson, Natalie, James Regetz, and Robert P Guralnick. 2014.
+“EarthEnv-Dem90: A Nearly-Global, Void-Free, Multi-Scale Smoothed, 90m
+Digital Elevation Model from Fused Aster and Srtm Data.” *ISPRS Journal
+of Photogrammetry and Remote Sensing* 87: 57–67.

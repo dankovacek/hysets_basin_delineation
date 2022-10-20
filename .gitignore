@@ -7,6 +7,11 @@ basin_tile_mapping/
 __pycache__/
 bib/
 references/
+.vscode/
+images/
+resources/
+results/
+dem_data/*
 
 processed_data/*
 !processed_data/station_to_region_mapper.json
